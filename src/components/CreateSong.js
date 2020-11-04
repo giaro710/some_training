@@ -12,16 +12,12 @@ class CreateSong extends React.Component {
     };
   }
 
-  newSong = (event) => {
-    event.preventDefault();
-
-    console.log(event.target.value);
+  newSong = () => {
     const song = { title: this.state.inputTitle, album: this.state.inputAlbum }
     this.props.addSong(song);
   }
 
   render() {
-    // console.log(this.state)
     return (
       <form onSubmit={(event) => this.newSong(event)} className="ui form">
         <div className="field">

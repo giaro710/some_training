@@ -10,9 +10,6 @@ const starterSongs = {
 }
 
 const songsReducer = (state=starterSongs, action) => {
-  // console.log('----')
-  // console.log(action)
-  // console.log("----");
   if (action.type === 'ADD_SONG') {
 
     return {

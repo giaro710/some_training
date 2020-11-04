@@ -4,6 +4,7 @@ import { selectSong } from '../actions';
 
 class SongList extends React.Component {
   renderedSongs = (songs) => {
+    console.log(songs);
     return songs.map((song) =>{
       return (
         <div className="item" key={song.title}>
@@ -22,15 +23,16 @@ class SongList extends React.Component {
 
   render() {
     return (
-    <div className="ui divided list">
-      {this.renderedSongs(this.props.songs)}
-    </div>
-    )
+      <div>
+        <div className="ui divided list">
+          {this.renderedSongs(this.props.songs)}
+        </div>
+      </div>
+    );
   }
 }
 
 const mapStateToProps = state => {
-  // console.log(state)
   return { songs: state.songs.songs };
 }
 
