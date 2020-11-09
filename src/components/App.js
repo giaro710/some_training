@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import SongList from './SongList';
-import SongDetails from './SongDetails';
-import CreateSong from './CreateSong';
+import SongList from "./SongList";
+import SongDetails from "./SongDetails";
+import CreateSong from "./CreateSong";
 
 const App = () => {
+  console.log("ciao");
   return (
     <div className="ui container grid">
       <h1 className="header">Save your songs</h1>
@@ -21,6 +22,6 @@ const App = () => {
       </div>
     </div>
   );
-}
+};
 
 export default App;
